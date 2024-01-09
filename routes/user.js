@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../controllers/multerConfig')
-const {usersData} = require('../models/userModel');
+const {usersData, getUser} = require('../models/userModel');
 
 // Route to display a user profile
 router.get('/:id/view', (req, res) => {
@@ -9,8 +9,7 @@ router.get('/:id/view', (req, res) => {
   const userId = parseInt(req.params.id);
 
   // Find the user with the specified ID in the user data
-  const user = usersData.users.find((user) => user.id === userId);
-  console.log(user)
+  const user = getUser(userId);
 
   if (!user) {
     // If user not found, render an error page or redirect
@@ -28,7 +27,7 @@ router.get('/:id/edit', (req, res) => {
   const userId = parseInt(req.params.id);
 
   // Find the user with the specified ID in the user data
-  const user = usersData.users.find((user) => user.id === userId);
+  const user = getUser(userId)
 
   if (!user) {
     // If user not found, render an error page or redirect
@@ -48,7 +47,7 @@ router.post('/:id/edit', upload.single('photo'), (req, res) => {
   const userId = parseInt(req.params.id);
 
   // Find the user with the specified ID in the user data
-  const user = usersData.users.find((user) => user.id === userId);
+  const user = getUser(userId)
   if (!user) {
     // If user not found, render an error page or redirect
     res.status(404).send('User not found');
