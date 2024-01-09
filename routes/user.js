@@ -81,7 +81,7 @@ router.get('/:id/delete', (req, res) => {
   usersData.users.splice(userIndex, 1);
 
 
-  res.redirect('/all');
+  res.redirect('/');
 });
 
 module.exports = router;
