@@ -94,7 +94,13 @@ let usersData = {
   ]
 }
 
-function getUsers() {
+function getUsers(searchQuery = "") {
+  if (searchQuery) {
+    return usersData.users.filter(user =>
+      user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      user.surname.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
   return usersData.users;
 }
 
