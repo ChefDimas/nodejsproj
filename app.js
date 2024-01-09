@@ -17,11 +17,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const indexRouter = require('./routes/index');
 const userRoute = require('./routes/user');
 const addUserRoute = require('./routes/addUser');
+const showUsersRoute = require('./routes/all_users');
 
 
 app.use('/', indexRouter);
 app.use('/user', userRoute);
 app.use('/add', addUserRoute);
+app.use('/all', showUsersRoute);
 
 
 
