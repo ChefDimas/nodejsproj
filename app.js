@@ -23,7 +23,7 @@ const showUsersRoute = require('./routes/all_users');
 app.use('/', indexRouter);
 app.use('/user', userRoute);
 app.use('/add', addUserRoute);
-app.use('/all_users', showUsersRoute);
+app.use('/all', showUsersRoute);
 
 
 
