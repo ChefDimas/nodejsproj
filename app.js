@@ -27,10 +27,7 @@ app.use('/all', showUsersRoute);
 
 
 
-// set the path for uploads
-app.use('/uploads', express.static(path.join(__dirname, 'public', 'team')));
-
-app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const upload = require('../controllers/multerConfig')
 
 const {usersData} = require('../models/userModel');
 
@@ -9,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 // Route to handle form submission for adding a new user
-router.post('/', (req, res) => {
+router.post('/', upload.single('photo') ,(req, res) => {
   // Extract user data from the form input values
   const { name, surname, age } = req.body;
 
@@ -24,14 +25,14 @@ router.post('/', (req, res) => {
     name: name,
     surname: surname,
     age: parseInt(age),
-    photo: undefined,
+    photo: req.file ? req.file.filename : undefined,
   };
 
   // Add the new user to your data source (e.g., usersData.users)
   usersData.users.push(newUser);
   console.log(usersData.users)
 
-  res.redirect('/');
+  res.redirect('/all');
 });
 
 module.exports = router;

@@ -9,49 +9,40 @@
     <!-- Include Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
-<body class="bg-gray-100">
-<div class="container mx-auto p-4">
+<body class="bg-gray-100 flex flex-col min-h-screen">
+<div class="container mx-auto p-4 flex-grow">
     <h1 class="text-3xl font-bold mb-4 text-indigo-700">Group Members</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Replace placeholders with your data -->
-        <!-- Example placeholder -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform hover:scale-105 hover:shadow-lg">
             <div class="mb-2">
-                <!-- Replace 'photo_link' with your photo link -->
-                <img src="../public/team/dumitru.jpeg" alt="Member's Photo" class="w-full h-32 object-cover rounded-lg">
+                <img src="/team/dumitru.jpeg" alt="Member's Photo" class="w-full h-64 object-contain rounded-lg">
             </div>
-            <!-- Replace 'Name' and 'ID' with your data -->
             <h2 class="text-xl font-semibold text-indigo-700 mb-2">Dumitru Lunic (ID: 23/1/0855/030)</h2>
-            <!-- Add more information here -->
         </div>
         <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform hover:scale-105 hover:shadow-lg">
             <div class="mb-2">
-                <!-- Replace 'photo_link' with your photo link -->
-                <img src="../public/team/mihail.jpeg" alt="Member's Photo" class="w-full h-32 object-cover rounded-lg">
+                <img src="/team/liri.jpeg" alt="Member's Photo" class="w-full h-64 object-contain rounded-lg">
             </div>
-            <!-- Replace 'Name' and 'ID' with your data -->
-            <h2 class="text-xl font-semibold text-indigo-700 mb-2">Mihail Lupasco (ID: 23/1/0855/031)</h2>
-            <!-- Add more information here -->
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <div class="mb-2">
-                <!-- Replace 'photo_link' with your photo link -->
-                <img src="../public/team/gheorghe.jpeg" alt="Member's Photo" class="w-full h-32 object-cover rounded-lg">
-            </div>
-            <!-- Replace 'Name' and 'ID' with your data -->
-            <h2 class="text-xl font-semibold text-indigo-700 mb-2">Gheorghe Tutunaru (ID: 23/1/0855/051)</h2>
-            <!-- Add more information here -->
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <div class="mb-2">
-                <!-- Replace 'photo_link' with your photo link -->
-                <img src="../public/team/liri.jpeg" alt="Member's Photo" class="w-full h-32 object-cover rounded-lg">
-            </div>
-            <!-- Replace 'Name' and 'ID' with your data -->
             <h2 class="text-xl font-semibold text-indigo-700 mb-2">Liri Ourfaly (ID: 23/1/0855/039)</h2>
-            <!-- Add more information here -->
         </div>
-        <!-- Repeat this block for each member -->
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="mb-2">
+                <img src="/team/mihail.jpeg" alt="Member's Photo" class="w-full h-64 object-contain rounded-lg">
+            </div>
+            <h2 class="text-xl font-semibold text-indigo-700 mb-2">Mihail Lupasco (ID: 23/1/0855/031)</h2>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-4 transform transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="mb-2">
+                <img src="/team/gheorghe.jpeg" alt="Member's Photo" class="w-full h-64 object-contain rounded-lg">
+            </div>
+            <h2 class="text-xl font-semibold text-indigo-700 mb-2">Gheorghe Tutunaru (ID: 23/1/0855/051)</h2>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-12">
+        <a href="/all" class="inline-block bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded-full transform transition-transform hover:scale-105 hover:shadow-lg">
+            Go to Users
+        </a>
     </div>
 </div>
 <footer class="bg-gray-800 text-white p-4 text-center">
@@ -60,13 +51,5 @@
         <p class="text-sm mt-2">Group Members: Lunic Dumitru, Mihai Lupasco, Gheorghe Tutunaru, Liri Ourfaly</p>
     </div>
 </footer>
-<div class="container mx-auto p-4">
-    <!-- Other content -->
-    <div class="flex justify-center"> <!-- Added flex and justify-center -->
-        <a href="/all" class="mt-12 inline-block bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded-full transform transition-transform hover:scale-105 hover:shadow-lg">
-            Go to Users
-        </a>
-    </div>
-</div>
 </body>
 </html>
