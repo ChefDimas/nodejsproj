@@ -12,6 +12,8 @@ app.set('view engine', 'ejs');
 // set the path for static resources to be accessible
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // set the path for routes
 const indexRouter = require('./routes/index');
@@ -19,16 +21,11 @@ const userRoute = require('./routes/user');
 const addUserRoute = require('./routes/addUser');
 const showUsersRoute = require('./routes/all_users');
 
-
+// Use the routes
 app.use('/', indexRouter);
 app.use('/user', userRoute);
 app.use('/add', addUserRoute);
 app.use('/all', showUsersRoute);
-
-
-
-app.use(express.static(path.join(__dirname, 'public')));
-
 
 
 // start the express server

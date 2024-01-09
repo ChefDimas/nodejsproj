@@ -1,8 +1,7 @@
-// Import modules
 const express = require('express');
-const router = express.Router(); // Create an Express router
+const router = express.Router();
 
-// Define the route for the homepage
+// route for the homepage
 router.get('/', (req, res) => {
 
     res.render('../views/homepage',);

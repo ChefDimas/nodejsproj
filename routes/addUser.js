@@ -28,7 +28,7 @@ router.post('/', upload.single('photo') ,(req, res) => {
     photo: req.file ? req.file.filename : undefined,
   };
 
-  // Add the new user to your data source (e.g., usersData.users)
+  // Add the new user to the userModel
   usersData.users.push(newUser);
   console.log(usersData.users)
 

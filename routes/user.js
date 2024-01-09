@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../controllers/multerConfig')
-
-
 const {usersData} = require('../models/userModel');
 
-// Route to display a user's profile
+// Route to display a user profile
 router.get('/:id/view', (req, res) => {
   // Extract user ID from the URL
   const userId = parseInt(req.params.id);
