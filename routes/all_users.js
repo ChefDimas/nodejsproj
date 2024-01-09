@@ -6,8 +6,8 @@ const users = getUsers(); // Call your getUsers function
 
 // Route to display all users
 router.get('/', (req, res) => {
-    // Render the 'index.ejs' file
-    res.render('../views/index', {users});
+    // Render the 'listUsers.ejs' file
+    res.render('../views/listUsers', {users});
 });
 
 module.exports = router;
