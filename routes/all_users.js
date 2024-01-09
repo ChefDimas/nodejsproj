@@ -1,13 +1,10 @@
-// Import modules
 const express = require('express');
-const router = express.Router(); // Create an Express router
-const { getUsers } = require('../models/userModel'); // Import your getUsers function
+const router = express.Router();
 
-// Define the route for the homepage
+// Route to display the homepage.ejs file
 router.get('/', (req, res) => {
-    const users = getUsers(); // Get the user data
-
-    res.render('../views/all_users', { users });
+    // Render the 'homepage.ejs' file
+    res.render('homepage');
 });
 
 module.exports = router;
