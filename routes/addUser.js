@@ -14,7 +14,9 @@ router.post('/', (req, res) => {
   const { name, surname, age } = req.body;
 
   // Generate a unique ID for the new user
-  const newUserId = usersData.users.length + 1;
+  const lastElement = usersData.users[usersData.users.length - 1];
+  const newUserId = lastElement["id"] + 1;
+  console.log(usersData.users)
 
   // Create a new user object
   const newUser = {
