@@ -25,6 +25,8 @@ node app.js
 
 Once the application is running, you can access it at http://localhost:3000.
 
+**Please be sure to use internet connection, in this project are used some CDNs.**
+---
 ### Endpoints
 
 - **View All Users:**
